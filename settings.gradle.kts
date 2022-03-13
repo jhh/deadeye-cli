@@ -8,4 +8,4 @@
  */
 
 rootProject.name = "deadeye-cli"
-includeBuild("../client")
+includeBuild("/Users/jeff/Code/strykeforce/deadeye/client")

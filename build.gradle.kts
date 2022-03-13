@@ -1,6 +1,6 @@
 plugins {
   // Apply the Kotlin JVM plugin to add support for Kotlin.
-  id("org.jetbrains.kotlin.jvm") version "1.3.72"
+  id("org.jetbrains.kotlin.jvm") version "1.5.20"
   // Apply the application plugin to add support for building a CLI application.
   application
   idea
@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-  val wpiVersion = "2020.3.2"
+  val wpiVersion = "2021.3.1"
   implementation("org.strykeforce:deadeye:20.0.0")
   implementation("ch.qos.logback:logback-classic:1.2.3")
   implementation("io.dropwizard.metrics:metrics-core:4.+")
