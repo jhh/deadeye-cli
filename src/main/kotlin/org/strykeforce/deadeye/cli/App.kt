@@ -7,12 +7,11 @@ import com.github.ajalt.clikt.parameters.options.default
 import com.github.ajalt.clikt.parameters.options.flag
 import com.github.ajalt.clikt.parameters.options.option
 import edu.wpi.first.networktables.NetworkTableInstance
-import mu.KotlinLogging
 import org.strykeforce.deadeye.Deadeye
 import org.strykeforce.deadeye.TargetData
 import java.util.concurrent.CountDownLatch
 
-private val logger = KotlinLogging.logger {}
+//private val logger = KotlinLogging.logger {}
 
 class App : CliktCommand() {
     private val verbose by option("--verbose", "-v").flag("--no-verbose")
@@ -33,7 +32,7 @@ class App : CliktCommand() {
 class Enable : CliktCommand() {
     private val id by argument()
     override fun run() {
-        val camera = Deadeye<TargetData>(id, TargetData::class.java)
+        val camera = Deadeye(id, TargetData::class.java)
         camera.enabled = true
     }
 }
@@ -41,7 +40,7 @@ class Enable : CliktCommand() {
 class Disable : CliktCommand() {
     private val id by argument()
     override fun run() {
-        val camera = Deadeye<TargetData>(id, TargetData::class.java)
+        val camera = Deadeye(id, TargetData::class.java)
         camera.enabled = false
     }
 }

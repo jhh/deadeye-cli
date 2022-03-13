@@ -1,7 +1,5 @@
 plugins {
-  // Apply the Kotlin JVM plugin to add support for Kotlin.
-  id("org.jetbrains.kotlin.jvm") version "1.5.20"
-  // Apply the application plugin to add support for building a CLI application.
+  kotlin("jvm") version "1.6.10"
   application
   idea
 }
@@ -11,23 +9,24 @@ repositories {
   // You can declare any Maven/Ivy/file repository here.
   jcenter()
   maven(url = "https://frcmaven.wpi.edu/artifactory/release/")
+  mavenCentral()
 }
 
 dependencies {
-  val wpiVersion = "2021.3.1"
-  implementation("org.strykeforce:deadeye:20.0.0")
-  implementation("ch.qos.logback:logback-classic:1.2.3")
-  implementation("io.dropwizard.metrics:metrics-core:4.+")
+  val wpiVersion = "2022.4.1"
+  implementation("org.strykeforce:deadeye:22.0.0")
+  implementation("ch.qos.logback:logback-classic:1.2.11")
+  implementation("io.dropwizard.metrics:metrics-core:4.2.8")
   implementation("edu.wpi.first.ntcore:ntcore-java:$wpiVersion")
   implementation("edu.wpi.first.ntcore:ntcore-jni:$wpiVersion:osxx86-64")
   implementation("edu.wpi.first.wpiutil:wpiutil-java:$wpiVersion")
-  implementation("org.jline:jline-terminal:3.13.3")
-  implementation("org.fusesource.jansi:jansi:1.18")
-  implementation("com.github.ajalt:clikt:2.3.0")
-  implementation ("com.squareup.moshi:moshi:1.9.2")
-  implementation("org.slf4j:slf4j-api:1.7.30")
-  implementation("io.github.microutils:kotlin-logging:1.8.3")
-  implementation("ch.qos.logback:logback-core:1.2.3")
+  implementation("org.jline:jline-terminal:3.21.0")
+  implementation("org.fusesource.jansi:jansi:2.4.0")
+  implementation("com.github.ajalt:clikt:2.8.0")
+  implementation ("com.squareup.moshi:moshi:1.13.0")
+  implementation("org.slf4j:slf4j-api:1.7.36")
+  implementation("io.github.microutils:kotlin-logging:2.1.21")
+  implementation("ch.qos.logback:logback-core:1.2.11")
 
 
   // Align versions of all Kotlin components
