@@ -57,7 +57,7 @@ class Disable : CliktCommand() {
 //}
 
 //fun main(args: Array<String>) = App().subcommands(Enable(), Disable(), Dump(), Watch()).main(args)
-fun main(args: Array<String>) = App().subcommands(Enable(), Disable(), Watch()).main(args)
+fun main(args: Array<String>) = App().subcommands(Enable(), Disable(), Watch(), Log()).main(args)
 
 //fun <T : TargetData> Camera<T>.toJson(writer: JsonWriter) {
 //    val moshi = Moshi.Builder().build()
